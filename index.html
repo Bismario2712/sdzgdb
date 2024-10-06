@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Bismario</title>
+    <style>
+  body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: aliceblue;
+    display: flex;
+  }
+  .Cajero{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0.1);
+    border-radius: 45px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    
+  } 
+
+  input{
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid blue;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+  }
+  button{
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(122, 213, 213);
+    color: white;
+    border-radius: 5px;
+
+  }
+  button:hover{
+    background-color: rgb(26, 209, 215);
+  }
+
+  ul{
+    padding: auto;
+    margin: 10px;
+    max-height: 200px;
+    overflow: auto;
+    border-radius: 1px solid white ;
+    
+  }
+   
+
+  
+
+
+    </style>
+</head>
+<body>
+   
+    <div class="Cajero">
+    <h1>cajero automatico</h1>
+    <div id="saldo"> Saldo actual: 20,000.00</div>
+
+    
+    <input type="number" name="cantidad" id="cantidad" placeholder="Ingrese la cantidad a retirar o depositar">
+    <button onclick="Consulta()"> Consulta</button>
+    <button onclick="Deposito()"> Deposito</button>
+    <button onclick="Retiro()"> Retiro</button>
+
+    <h2>Transacciones</h2>
+    <ul id="Transacciones"></ul>
+    
+</div>
+
+<script src="main.js"> </script>
+
+</body>
+</html>
